@@ -64,7 +64,18 @@
       }, 3000)
     }
     $(document).ready(function() {
-      addMobileCTA();
+      var screenSize = $(window).width();
+      if(screenSize < 576) {
+        addMobileCTA();
+      }
+    })
+    $(window).resize(function(){
+      var screenSize = $(window).width();
+      if(screenSize > 575) {
+        $('#mobileCTA').hide();
+      } else{
+        addMobileCTA();
+      }
     })
     </script>
   </body>
