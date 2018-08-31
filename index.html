@@ -81,20 +81,20 @@
       }
     }
     $(document).ready(function() {
-      // var screenSize = $(window).width();
-      // var orientation = findOrientation();
-      // if((screenSize < 576) && (orientation = 'portrait')) {
-      //   addMobileCTA();
-      // }
+      var screenSize = $(window).width();
+      var orientation = findOrientation();
+      if((screenSize < 576) && (orientation == 'portrait')) {
+        addMobileCTA();
+      }
     })
     $(window).resize(function(){
-      // var screenSize = $(window).width();
-      // var orientation = findOrientation();
-      // if(screenSize > 575 || orientation == 'portrait') {
-      //   $('#mobileCTA').hide();
-      // } else {
-      //   addMobileCTA();
-      // }
+      var screenSize = $(window).width();
+      var orientation = findOrientation();
+      if((screenSize > 575) || (orientation == 'landscape')) {
+        $('#mobileCTA').hide();
+      } else {
+        addMobileCTA();
+      }
     })
     </script>
   </body>
